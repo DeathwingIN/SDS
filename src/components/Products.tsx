@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   const products = [
@@ -63,10 +64,12 @@ const Products = () => {
           ))}
         </div>
         <div className="text-center mt-12">
-          <Button size="lg" className="group">
-            View All Products
-            <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          <Link to="/products">
+            <Button size="lg" className="group">
+              View All Products
+              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
