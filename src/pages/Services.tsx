@@ -10,7 +10,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Search } from "lucide-react";
 
-const Products = () => {
+const Services = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [categoryFilter, setCategoryFilter] = useState("all");
 
@@ -82,7 +82,7 @@ const Products = () => {
           </Select>
         </div>
 
-        {/* Products Grid */}
+        {/* Services Grid */}
         <div className="grid md:grid-cols-3 gap-8">
           {filteredProducts.map((product, index) => (
             <div
@@ -120,4 +120,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Services;

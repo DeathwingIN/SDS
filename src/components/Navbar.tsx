@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ const Navbar = () => {
   const navItems = [
     { name: "Home", href: "/", isPage: true },
     { name: "About", href: "/#about", isPage: false },
-    { name: "Products", href: "/products", isPage: true },
+    { name: "Services", href: "/services", isPage: true },
     { name: "Contact", href: "/#contact", isPage: false },
   ];
 
@@ -24,7 +25,7 @@ const Navbar = () => {
         setTimeout(() => {
           const element = document.querySelector(href.replace('/', ''));
           element?.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
+        }, 10);
       } else {
         const element = document.querySelector(href.replace('/', ''));
         element?.scrollIntoView({ behavior: 'smooth' });
@@ -36,9 +37,10 @@ const Navbar = () => {
   return (
     <nav className="fixed w-full bg-white/80 backdrop-blur-sm z-50 border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex items-center">
-            <span className="text-xl font-bold text-primary">AquaFlow</span>
+        <div className="flex justify-between h-16" >
+          <div className="flex items-center "  >
+            <img src="./Logo.png" className="h-1/2 w-full object-contain cursor-pointer " alt="SDS" onClick={() => navigate("/")}/>
+            {/*<span className="text-sm ">SDS Fixtures & Fittings </span>*/}
           </div>
           
           {/* Desktop menu */}

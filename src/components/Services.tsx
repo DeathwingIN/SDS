@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const Products = () => {
+const Services = () => {
   const products = [
     {
       title: "Premium Kitchen Tap",
@@ -64,7 +64,7 @@ const Products = () => {
           ))}
         </div>
         <div className="text-center mt-12">
-          <Link to="/products">
+          <Link to="/src/components/Services">
             <Button size="lg" className="group">
               View All Products
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
@@ -76,4 +76,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Services;
