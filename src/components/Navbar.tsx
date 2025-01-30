@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const navItems = [
     { name: "Home", href: "#" },
@@ -31,7 +33,7 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
-            <Button>Get Quote</Button>
+            <Button onClick={() => navigate('/quote-request')}>Get Quote</Button>
           </div>
 
           {/* Mobile menu button */}
@@ -61,7 +63,15 @@ const Navbar = () => {
               </a>
             ))}
             <div className="px-3 py-2">
-              <Button className="w-full">Get Quote</Button>
+              <Button 
+                className="w-full"
+                onClick={() => {
+                  navigate('/quote-request');
+                  setIsOpen(false);
+                }}
+              >
+                Get Quote
+              </Button>
             </div>
           </div>
         </div>
