@@ -1,18 +1,37 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const navItems = [
-    { name: "Home", href: "#" },
-    { name: "About", href: "#about" },
-    { name: "Products", href: "#products" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/", isPage: true },
+    { name: "About", href: "/#about", isPage: false },
+    { name: "Products", href: "/products", isPage: true },
+    { name: "Contact", href: "/#contact", isPage: false },
   ];
+
+  const handleNavigation = (href: string, isPage: boolean) => {
+    if (isPage) {
+      navigate(href);
+    } else {
+      if (location.pathname !== '/') {
+        navigate('/');
+        setTimeout(() => {
+          const element = document.querySelector(href.replace('/', ''));
+          element?.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      } else {
+        const element = document.querySelector(href.replace('/', ''));
+        element?.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    setIsOpen(false);
+  };
 
   return (
     <nav className="fixed w-full bg-white/80 backdrop-blur-sm z-50 border-b">
@@ -25,13 +44,13 @@ const Navbar = () => {
           {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.href}
+                onClick={() => handleNavigation(item.href, item.isPage)}
                 className="text-gray-700 hover:text-primary transition-colors"
               >
                 {item.name}
-              </a>
+              </button>
             ))}
             <Button onClick={() => navigate('/quote-request')}>Get Quote</Button>
           </div>
@@ -53,14 +72,13 @@ const Navbar = () => {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-b">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.href}
-                className="block px-3 py-2 text-gray-700 hover:text-primary"
-                onClick={() => setIsOpen(false)}
+                onClick={() => handleNavigation(item.href, item.isPage)}
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-primary"
               >
                 {item.name}
-              </a>
+              </button>
             ))}
             <div className="px-3 py-2">
               <Button 

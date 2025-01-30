@@ -62,15 +62,6 @@ const Hero = () => {
                 View Products
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="group bg-white/10 hover:bg-white/20"
-                onClick={() => navigate("/quote-request")}
-              >
-                Get Quote
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
             </div>
           </div>
         </div>
