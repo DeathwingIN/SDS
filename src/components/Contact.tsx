@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
+import Map from "./Map";
 
 const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
@@ -12,7 +13,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div className="flex flex-col items-center text-center md:items-start md:text-left">
             <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
             <p className="text-gray-600 mb-8 max-w-md">
@@ -72,6 +73,9 @@ const Contact = () => {
               </Button>
             </form>
           </div>
+        </div>
+        <div className="w-full">
+          <Map />
         </div>
       </div>
     </section>
