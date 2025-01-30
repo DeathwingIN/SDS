@@ -47,7 +47,7 @@ const QuoteRequest = () => {
   }
 
   return (
-    <div className="max-w-2xl mx-auto py-12 px-4">
+    <div className="max-w-2xl mx-auto py-12 px-4 pt-20">
       <h1 className="text-3xl font-bold mb-8">Request a Quote</h1>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">

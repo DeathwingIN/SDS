@@ -9,13 +9,13 @@ const Hero = () => {
   const slides = [
     {
       image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80",
-      title: "Modern Taps & Pumps",
-      subtitle: "Premium Quality for Australian Homes",
+      title: "Tailored to the specifications of commercial projects",
+      subtitle: "Premium quality products to the builders",
     },
     {
       image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&w=1200&q=80",
       title: "Professional Solutions",
-      subtitle: "Engineered for Excellence",
+      subtitle: "Value Management & cost saving options",
     },
   ];
 
@@ -57,7 +57,7 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 className="group"
-                onClick={() => navigate("/products")}
+                onClick={() => navigate("/services")}
               >
                 View Products
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
