@@ -12,29 +12,29 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-12">
-          <div>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="flex flex-col items-center text-center md:items-start md:text-left">
             <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
-            <p className="text-gray-600 mb-8">
+            <p className="text-gray-600 mb-8 max-w-md">
               Have questions about our products? We're here to help. Fill out the
               form below and we'll get back to you shortly.
             </p>
-            <div className="space-y-4">
-              <div className="flex items-center">
+            <div className="space-y-4 w-full max-w-md">
+              <div className="flex items-center justify-center md:justify-start">
                 <Phone className="w-5 h-5 text-primary mr-3" />
                 <span>1300 123 456</span>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center justify-center md:justify-start">
                 <Mail className="w-5 h-5 text-primary mr-3" />
                 <span>info@aquaflow.com.au</span>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center justify-center md:justify-start">
                 <MapPin className="w-5 h-5 text-primary mr-3" />
                 <span>123 Business Street, Sydney NSW 2000</span>
               </div>
             </div>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-sm">
+          <div className="bg-white p-6 rounded-lg shadow-sm max-w-md mx-auto w-full">
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
