@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
     {
@@ -51,10 +53,25 @@ const Hero = () => {
             <p className="text-xl md:text-2xl text-white/90 mb-8">
               {slides[currentSlide].subtitle}
             </p>
-            <Button size="lg" className="group">
-              View Products
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <div className="space-x-4">
+              <Button 
+                size="lg" 
+                className="group"
+                onClick={() => navigate("/products")}
+              >
+                View Products
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="group bg-white/10 hover:bg-white/20"
+                onClick={() => navigate("/quote-request")}
+              >
+                Get Quote
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </div>
           </div>
         </div>
       </div>
