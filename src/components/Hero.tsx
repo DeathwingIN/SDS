@@ -9,13 +9,13 @@ const Hero = () => {
   const slides = [
     {
       image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80",
-      title: "Tailored to the specifications of commercial projects",
-      subtitle: "Premium quality products to the builders",
+      title: "Commercial Construction Solutions",
+      subtitle: "Premium architectural hardware & finishes for discerning builders and developers",
     },
     {
       image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&w=1200&q=80",
-      title: "Professional Solutions",
-      subtitle: "Value Management & cost saving options",
+      title: "Professional Installation Services",
+      subtitle: "Certified technicians delivering precision installation & value-engineered solutions",
     },
   ];
 
@@ -48,20 +48,20 @@ const Hero = () => {
 
         <div className="relative h-full flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div className="max-w-2xl md:max-w-3xl text-center md:text-left animate-fade-in-up">
-              <h1 className="text-3xl md:text-6xl font-bold text-white mb-4 md:mb-6 md:leading-normal">
+            <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
+              <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6 leading-tight md:leading-normal">
                 {slides[currentSlide].title}
               </h1>
-              <p className="text-lg md:text-2xl text-white/90 mb-6 md:mb-8 md:max-w-xl">
+              <p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-6 md:mb-8 max-w-2xl mx-auto px-4 md:px-0">
                 {slides[currentSlide].subtitle}
               </p>
-              <div className="flex justify-center md:justify-start">
+              <div className="flex justify-center">
                 <Button
                     size="lg"
-                    className="group transform transition-all hover:scale-105"
+                    className="group transform transition-all hover:scale-105 bg-primary/90 hover:bg-primary"
                     onClick={() => navigate("/services")}
                 >
-                  View Products
+                  Explore Solutions
                   <ArrowRight className="ml-2 group-hover:translate-x-2 transition-transform duration-300" />
                 </Button>
               </div>
