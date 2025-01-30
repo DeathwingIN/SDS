@@ -2,18 +2,21 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import hero2 from '../../public/Hero02.jpg'
+import hero1 from '../../public/hero01.jpg'
+
 
 const Hero = () => {
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
     {
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80",
+      image: hero1,
       title: "Commercial Construction Solutions",
       subtitle: "Premium architectural hardware & finishes for discerning builders and developers",
     },
     {
-      image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&w=1200&q=80",
+      image: hero2,
       title: "Professional Installation Services",
       subtitle: "Certified technicians delivering precision installation & value-engineered solutions",
     },
