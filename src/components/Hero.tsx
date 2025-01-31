@@ -58,16 +58,16 @@ const Hero = () => {
               <p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-6 md:mb-8 max-w-2xl mx-auto px-4 md:px-0">
                 {slides[currentSlide].subtitle}
               </p>
-              <div className="flex justify-center">
-                <Button
-                    size="lg"
-                    className="group transform transition-all hover:scale-105 bg-primary/90 hover:bg-primary"
-                    onClick={() => navigate("/services")}
-                >
-                  Explore Solutions
-                  <ArrowRight className="ml-2 group-hover:translate-x-2 transition-transform duration-300" />
-                </Button>
-              </div>
+              {/*<div className="flex justify-center">*/}
+              {/*  <Button*/}
+              {/*      size="lg"*/}
+              {/*      className="group transform transition-all hover:scale-105 bg-primary/90 hover:bg-primary"*/}
+              {/*      onClick={() => navigate("/services")}*/}
+              {/*  >*/}
+              {/*    Explore Solutions*/}
+              {/*    <ArrowRight className="ml-2 group-hover:translate-x-2 transition-transform duration-300" />*/}
+              {/*  </Button>*/}
+              {/*</div>*/}
             </div>
           </div>
         </div>
