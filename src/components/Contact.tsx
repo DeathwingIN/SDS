@@ -2,44 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
-import { useEffect, useRef } from "react";
 
 const Contact = () => {
-  const mapContainer = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const loadGoogleMaps = () => {
-      const script = document.createElement('script');
-      script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAPS_API_KEY}`;
-      script.async = true;
-      script.defer = true;
-      script.onload = initMap;
-      document.head.appendChild(script);
-
-      return () => {
-        document.head.removeChild(script);
-      };
-    };
-
-    const initMap = () => {
-      if (!mapContainer.current) return;
-
-      const sydney = { lat: -33.8688, lng: 151.2093 };
-      const map = new google.maps.Map(mapContainer.current, {
-        zoom: 15,
-        center: sydney,
-      });
-
-      new google.maps.Marker({
-        position: sydney,
-        map: map,
-        title: "Our Location"
-      });
-    };
-
-    window.initMap = initMap;
-    loadGoogleMaps();
-  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -47,7 +11,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12">
           <div className="flex flex-col h-full">
@@ -60,22 +24,31 @@ const Contact = () => {
               <div className="space-y-4">
                 <div className="flex items-center justify-center md:justify-start">
                   <Phone className="w-5 h-5 text-primary mr-3" />
-                  <span>1300 123 456</span>
+                  <span>0433 855 820 </span>
                 </div>
                 <div className="flex items-center justify-center md:justify-start">
                   <Mail className="w-5 h-5 text-primary mr-3" />
-                  <span>info@aquaflow.com.au</span>
+                  <span>info@sdsffe.com.au</span>
                 </div>
                 <div className="flex items-center justify-center md:justify-start">
                   <MapPin className="w-5 h-5 text-primary mr-3" />
-                  <span>123 Business Street, Sydney NSW 2000</span>
+                  <span>3 Valrena Way, Pakenham, VIC 3810</span>
                 </div>
               </div>
             </div>
-            
+
             {/* Map Section */}
-            <div className="flex-grow min-h-[300px] rounded-lg overflow-hidden">
-              <div ref={mapContainer} className="w-full h-full" />
+            <div className="flex-grow rounded-lg overflow-hidden">
+              <div className="relative pt-[75%]"> {/* 450/600 = 0.75 (4:3 aspect ratio) */}
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d931.3473057160022!2d145.48635295753252!3d-38.079380666946186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad61e013e4e6a13%3Ax65c65dd7bee42942!2s3%20Valrena%20Way%2C%20Pakenham%20VIC%203810%2C%20Australia!5e1!3m2!1sen!2slk!4v1738307204174!5m2!1sen!2slk"
+                    className="absolute top-0 left-0 w-full h-full"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
             </div>
           </div>
 
@@ -86,7 +59,7 @@ const Contact = () => {
                 <label htmlFor="companyName" className="block text-sm font-medium mb-2">
                   Company Name
                 </label>
-                <Input id="companyName" placeholder="Your company name" />
+                <Input id="companyName" placeholder="Your company name"/>
               </div>
               <div>
                 <label htmlFor="address" className="block text-sm font-medium mb-2">
