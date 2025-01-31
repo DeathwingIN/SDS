@@ -8,9 +8,9 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Company Info */}
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold text-white">Aqua Industrial</h3>
+              <h3 className="text-xl font-semibold text-white">SDS Fixtures & Fittings</h3>
               <p className="text-sm">
-                Providing quality household taps and pumping solutions across Australia.
+                Providing quality comprehensive range of hardware & finishes services.
               </p>
               {/*<div className="flex space-x-4">*/}
               {/*  <Link to="#" className="hover:text-primary transition-colors">*/}
@@ -87,7 +87,7 @@ const Footer = () => {
             <p className="text-sm">
               © {new Date().getFullYear()} SDS Fixtures & Fittings. All rights reserved.
             </p>
-            <p className="text-[8px]">Images by <a
+            <p className="text-[8px] hidden">Images by <a
                 href="https://www.freepik.com" target="_blank">Freepik</a></p>
           </div>
         </div>
