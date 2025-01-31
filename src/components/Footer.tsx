@@ -85,7 +85,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="border-t border-gray-800 mt-8 pt-8 text-center ">
             <p className="text-sm">
-              © {new Date().getFullYear()} Aqua Industrial. All rights reserved.
+              © {new Date().getFullYear()} SDS Fixtures & Fittings. All rights reserved.
             </p>
             <p className="text-[8px]">Images by <a
                 href="https://www.freepik.com" target="_blank">Freepik</a></p>
