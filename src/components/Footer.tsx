@@ -12,17 +12,17 @@ const Footer = () => {
               <p className="text-sm">
                 Providing quality household taps and pumping solutions across Australia.
               </p>
-              <div className="flex space-x-4">
-                <Link to="#" className="hover:text-primary transition-colors">
-                  <Facebook size={20}/>
-                </Link>
-                <Link to="#" className="hover:text-primary transition-colors">
-                  <Instagram size={20}/>
-                </Link>
-                <Link to="#" className="hover:text-primary transition-colors">
-                  <Linkedin size={20}/>
-                </Link>
-              </div>
+              {/*<div className="flex space-x-4">*/}
+              {/*  <Link to="#" className="hover:text-primary transition-colors">*/}
+              {/*    <Facebook size={20}/>*/}
+              {/*  </Link>*/}
+              {/*  <Link to="#" className="hover:text-primary transition-colors">*/}
+              {/*    <Instagram size={20}/>*/}
+              {/*  </Link>*/}
+              {/*  <Link to="#" className="hover:text-primary transition-colors">*/}
+              {/*    <Linkedin size={20}/>*/}
+              {/*  </Link>*/}
+              {/*</div>*/}
             </div>
 
             {/* Quick Links */}
@@ -35,17 +35,17 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="#about" className="hover:text-primary transition-colors">
+                  <Link to="/about" className="hover:text-primary transition-colors">
                     About Us
                   </Link>
                 </li>
                 <li>
-                  <Link to="#products" className="hover:text-primary transition-colors">
+                  <Link to="/services" className="hover:text-primary transition-colors">
                     Products
                   </Link>
                 </li>
                 <li>
-                  <Link to="#contact" className="hover:text-primary transition-colors">
+                  <Link to="/#contact" className="hover:text-primary transition-colors">
                     Contact
                   </Link>
                 </li>
@@ -58,15 +58,15 @@ const Footer = () => {
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <Phone size={18}/>
-                  <span>1800 123 456</span>
+                  <span>0433 855 820</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail size={18}/>
-                  <span>info@aquaindustrial.com.au</span>
+                  <span>info@sdsffe.com.au</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin size={18}/>
-                  <span>123 Industrial Ave, Sydney NSW 2000</span>
+                  <span>3 Valrena Way, Pakenham, VIC 3810</span>
                 </div>
               </div>
             </div>
@@ -83,11 +83,12 @@ const Footer = () => {
           </div>
 
           {/* Copyright */}
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center ">
             <p className="text-sm">
               © {new Date().getFullYear()} Aqua Industrial. All rights reserved.
             </p>
-            <p className="text-[8px]">Images by <a href="https://www.freepik.com" target="_blank">Freepik</a></p>
+            <p className="text-[8px]">Images by <a
+                href="https://www.freepik.com" target="_blank">Freepik</a></p>
           </div>
         </div>
 
