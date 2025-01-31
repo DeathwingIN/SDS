@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
-import { useEffect, useRef } from "react";
 
 const Contact = () => {
 
@@ -37,19 +36,19 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            
+
             {/* Map Section */}
-            <div className="flex-grow min-h-[300px] rounded-lg overflow-hidden">
-              {/*<div ref={mapContainer} className="w-full h-full" />*/}
-              <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d931.3473057160022!2d145.48635295753252!3d-38.079380666946186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad61e013e4e6a13%3A0x65c65dd7bee42942!2s3%20Valrena%20Way%2C%20Pakenham%20VIC%203810%2C%20Australia!5e1!3m2!1sen!2slk!4v1738307204174!5m2!1sen!2slk"
-                  width="600"
-                  height="450"
-                  style={{border: 0}}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+            <div className="flex-grow rounded-lg overflow-hidden">
+              <div className="relative pt-[75%]"> {/* 450/600 = 0.75 (4:3 aspect ratio) */}
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d931.3473057160022!2d145.48635295753252!3d-38.079380666946186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad61e013e4e6a13%3Ax65c65dd7bee42942!2s3%20Valrena%20Way%2C%20Pakenham%20VIC%203810%2C%20Australia!5e1!3m2!1sen!2slk!4v1738307204174!5m2!1sen!2slk"
+                    className="absolute top-0 left-0 w-full h-full"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
             </div>
           </div>
 
