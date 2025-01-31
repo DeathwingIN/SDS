@@ -5,41 +5,6 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import { useEffect, useRef } from "react";
 
 const Contact = () => {
-  const mapContainer = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const loadGoogleMaps = () => {
-      const script = document.createElement('script');
-      script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAPS_API_KEY}`;
-      script.async = true;
-      script.defer = true;
-      script.onload = initMap;
-      document.head.appendChild(script);
-
-      return () => {
-        document.head.removeChild(script);
-      };
-    };
-
-    const initMap = () => {
-      if (!mapContainer.current) return;
-
-      const sydney = { lat: -33.8688, lng: 151.2093 };
-      const map = new google.maps.Map(mapContainer.current, {
-        zoom: 15,
-        center: sydney,
-      });
-
-      new google.maps.Marker({
-        position: sydney,
-        map: map,
-        title: "Our Location"
-      });
-    };
-
-    window.initMap = initMap;
-    loadGoogleMaps();
-  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -75,7 +40,16 @@ const Contact = () => {
             
             {/* Map Section */}
             <div className="flex-grow min-h-[300px] rounded-lg overflow-hidden">
-              <div ref={mapContainer} className="w-full h-full" />
+              {/*<div ref={mapContainer} className="w-full h-full" />*/}
+              <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d931.3473057160022!2d145.48635295753252!3d-38.079380666946186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad61e013e4e6a13%3A0x65c65dd7bee42942!2s3%20Valrena%20Way%2C%20Pakenham%20VIC%203810%2C%20Australia!5e1!3m2!1sen!2slk!4v1738307204174!5m2!1sen!2slk"
+                  width="600"
+                  height="450"
+                  style={{border: 0}}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
 
@@ -86,7 +60,7 @@ const Contact = () => {
                 <label htmlFor="companyName" className="block text-sm font-medium mb-2">
                   Company Name
                 </label>
-                <Input id="companyName" placeholder="Your company name" />
+                <Input id="companyName" placeholder="Your company name"/>
               </div>
               <div>
                 <label htmlFor="address" className="block text-sm font-medium mb-2">
