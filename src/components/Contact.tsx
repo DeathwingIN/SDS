@@ -11,7 +11,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12">
           <div className="flex flex-col h-full">
@@ -24,15 +24,15 @@ const Contact = () => {
               <div className="space-y-4">
                 <div className="flex items-center justify-center md:justify-start">
                   <Phone className="w-5 h-5 text-primary mr-3" />
-                  <span>1300 123 456</span>
+                  <span>0433 855 820 </span>
                 </div>
                 <div className="flex items-center justify-center md:justify-start">
                   <Mail className="w-5 h-5 text-primary mr-3" />
-                  <span>info@aquaflow.com.au</span>
+                  <span>info@sdsffe.com.au</span>
                 </div>
                 <div className="flex items-center justify-center md:justify-start">
                   <MapPin className="w-5 h-5 text-primary mr-3" />
-                  <span>123 Business Street, Sydney NSW 2000</span>
+                  <span>3 Valrena Way, Pakenham, VIC 3810</span>
                 </div>
               </div>
             </div>
