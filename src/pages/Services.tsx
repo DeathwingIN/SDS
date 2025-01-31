@@ -36,7 +36,7 @@ const Services = () => {
       description: "Temperature-controlled mixer with modern finish",
       price: "$249.99",
     },
-    // Add more products as needed
+    
   ];
 
   const filteredProducts = products.filter((product) => {

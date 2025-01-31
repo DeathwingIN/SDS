@@ -22,15 +22,16 @@ const Services = () => {
       image: "https://images.unsplash.com/photo-1584507305068-e52a1a58c612?auto=format&fit=crop&w=800&q=80",
       description: "Temperature-controlled mixer with modern finish",
     },
+
   ];
 
   return (
     <section id="products" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Featured Products</h2>
+          <h2 className="text-3xl font-bold mb-4">Our Services</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Discover our range of high-quality taps and pumps, designed for
+            Discover our range of high-quality hardware & finishes, designed for
             durability and performance
           </p>
         </div>
