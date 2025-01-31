@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import hero2 from '../../public/Hero02.jpg'
-import hero1 from '../../public/hero01.jpg'
+import hero2 from '/Hero02.jpg'
+import hero1 from '/hero01.jpg'
 
 
 const Hero = () => {
