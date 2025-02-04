@@ -3,10 +3,23 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
 import emailjs from "@emailjs/browser";
+import {useState, useRef, useEffect} from "react";
 
 const Contact = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(
+      null
+  );
+  const formRef = useRef<HTMLFormElement>(null); // Reference to the form
+  useEffect(() => {
+    if (message) {
+      const timer = setTimeout(() => setMessage(null), 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [message]);
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsLoading(true);
 
     // Send email using EmailJS
     emailjs
@@ -17,12 +30,19 @@ const Contact = () => {
             import.meta.env.VITE_EMAILJS_PUBLIC_KEY
         )
         .then(
-            (result) => {
-              alert("Message sent successfully!");
+            () => {
+              setMessage({ type: "success", text: "Message sent successfully!" });
+              setIsLoading(false);
+
+              // Reset the form fields
+              if (formRef.current) {
+                formRef.current.reset();
+              }
             },
             (error) => {
               console.error("Error sending email:", error);
-              alert("Failed to send message. Please try again later.");
+              setMessage({ type: "error", text: "Failed to send message. Please try again later." });
+              setIsLoading(false);
             }
         );
   };
@@ -69,8 +89,26 @@ const Contact = () => {
             </div>
 
             {/* Right Section: Contact Form */}
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="bg-white p-6 rounded-lg shadow-sm relative">
+              {/* Message Notification */}
+              {message && (
+                  <div
+                      className={`absolute bottom-4 left-0 right-0 mx-auto w-full max-w-xs bg-${
+                          message.type === "success" ? "green" : "red"
+                      }-100 text-${
+                          message.type === "success" ? "green" : "red"
+                      }-800 text-sm font-medium px-4 py-2 rounded-md shadow-md transition-opacity duration-300`}
+                      style={{ opacity: message ? 1 : 0 }}
+                  >
+                    <span>{message.text}</span>
+                  </div>
+              )}
+
+              <form
+                  ref={formRef} // Attach the form reference
+                  onSubmit={handleSubmit}
+                  className="space-y-4"
+              >
                 <div>
                   <label htmlFor="companyName" className="block text-sm font-medium mb-2">
                     Company Name
@@ -112,8 +150,8 @@ const Contact = () => {
                       className="min-h-[120px]"
                   />
                 </div>
-                <Button type="submit" className="w-full">
-                  Send Message
+                <Button type="submit" className="w-full" disabled={isLoading}>
+                  {isLoading ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </div>
