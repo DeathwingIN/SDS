@@ -1,32 +1,32 @@
 export const services = [
   {
-    title: "Premium Commercial Kitchen",
+    title: "Commercial Kitchen Fixtures",
     category: "",
     image: "./service01.jpg",
-    description: "Durable stainless steel fixtures meeting HACCP standards, designed for high-traffic food preparation areas with optimal hygiene and workflow efficiency.",
+    description: "Discover an extensive range of high-quality kitchen fixtures from top manufacturers. We offer premium products, including commercial taps, sinks, food-grade furnishings, and appliances, all designed to meet the highest standards and exceed the expectations of our clients.",
   },
   {
-    title: "Bathrooms and Toilets",
+    title: "Toilets, Bathrooms, and Changing Rooms",
     category: "",
     image: "./service02.jpg",
-    description: "Commercial-grade sanitaryware with antimicrobial surfaces, ADA-compliant fittings, and water-efficient systems for public and institutional facilities.",
+    description: "Discover highest quality sanitaryware and tapware from industry leading manufacturers, specifically designed for commercial projects. Our products ensure reliability, durability, and functionality for all your bathroom and changing room needs.",
   },
   {
     title: "Modern Laundries, Cleaner’s Rooms",
     category: "",
     image: "./service03.jpg",
-    description: "Heavy-duty utility installations featuring chemical-resistant surfaces, industrial-grade plumbing, and ergonomic layouts for maintenance staff efficiency.",
+    description: "Enhancing Quality of Life Through Advanced, High-End Laundry Equipment for Commercial Spaces.",
   },
   {
-    title: "Outdoor Drinking Fountains ",
+    title: "Drinking Fountains ",
     category: "",
     image: "./service04.jpg",
-    description: "All-weather hydration solutions with vandal-resistant construction, ADA accessibility, and water-saving features for public spaces and institutions.",
+    description: "High-quality products from industry-leading manufacturers, designed to meet public standards while enhancing the value for public users.",
   },
   {
     title: "Street Furniture",
     category: "",
     image: "./service05.jpg",
-    description: "Durable public realm installations including bollards, seating, and bins featuring anti-graffiti coatings and sustainable material specifications.",
+    description: "Durable public carpark equipment from market-leading manufacturers, designed to enhance both the architecture and functionality of outdoor spaces.",
   },
 ];

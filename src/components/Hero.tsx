@@ -12,13 +12,13 @@ const Hero = () => {
   const slides = [
     {
       image: hero1,
-      title: "Commercial Construction Solutions",
-      subtitle: "Premium architectural hardware & finishes for discerning builders and developers",
+      title: "Fixtures and Fittings Supply Solutions",
+      subtitle: "Delivering premium quality service with industry-leading products for commercial projects",
     },
     {
       image: hero2,
-      title: "Professional Installation Services",
-      subtitle: "Certified technicians delivering precision installation & value-engineered solutions",
+      title: "Professional Services",
+      subtitle: "Reviewing the tender documents is a key responsibility of our estimating team",
     },
   ];
 
