@@ -40,10 +40,11 @@ const Navbar = () => {
             <div className="flex items-center w-fit">
               <img
                   src="./Logo.png"
-                  className="h-1/2 w-auto object-contain cursor-pointer"
+                  className="md:h-[40px] h-1/2 w-auto object-contain cursor-pointer"
                   alt="SDS"
                   onClick={() => navigate("/")}
               />
+              <p className="pl-5 text-[20px] md:text-[30px] text-black font-medium">Fixtures & Fittings</p>
             </div>
 
             {/* Desktop menu */}

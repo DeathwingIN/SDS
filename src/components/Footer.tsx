@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="space-y-4">
               <h3 className="text-xl font-semibold text-white">SDS Fixtures & Fittings</h3>
               <p className="text-sm">
-                Providing quality comprehensive range of hardware & finishes services.
+                Providing a Quality and extensive range of furnishings
               </p>
               {/*<div className="flex space-x-4">*/}
               {/*  <Link to="#" className="hover:text-primary transition-colors">*/}
