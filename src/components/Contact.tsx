@@ -1,30 +1,56 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin } from "lucide-react";
-import emailjs from "@emailjs/browser";
+import axios from "axios";
+import {Mail, MapPin, Phone} from "lucide-react";
 
 const Contact = () => {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Send email using EmailJS
-    emailjs
-        .sendForm(
-            import.meta.env.VITE_EMAILJS_SERVICE_ID,
-            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-            e.currentTarget,
-            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-        )
-        .then(
-            (result) => {
-              alert("Message sent successfully!");
+    // Get form data
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      companyName: formData.get("companyName"),
+      address: formData.get("address"),
+      name: formData.get("name"),
+      phone: formData.get("phone"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+    };
+
+    try {
+      // Send email using SendGrid API
+      const response = await axios.post(
+          "https://api.sendgrid.com/v3/mail/send",
+          {
+            personalizations: [
+              {
+                to: [{ email: "info@sdsffe.com.au" }],
+                subject: "New Contact Form Submission",
+              },
+            ],
+            from: { email: "noreply@yourdomain.com" }, // Replace with your verified sender email
+            template_id: import.meta.env.VITE_SENDGRID_TEMPLATE_ID,
+            dynamic_template_data: data,
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${import.meta.env.VITE_SENDGRID_API_KEY}`,
+              "Content-Type": "application/json",
             },
-            (error) => {
-              console.error("Error sending email:", error);
-              alert("Failed to send message. Please try again later.");
-            }
-        );
+          }
+      );
+
+      if (response.status === 202) {
+        alert("Message sent successfully!");
+      } else {
+        alert("Failed to send message. Please try again later.");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("An error occurred while sending the message.");
+    }
   };
 
   return (
