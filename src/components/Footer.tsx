@@ -8,9 +8,12 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Company Info */}
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold text-white">SDS Fixtures & Fittings</h3>
+              <span>
+                <h3 className="text-xl font-semibold text-white">SDS Fixtures & Fittings</h3>
+                <h5 className="text-white font-thin">ABN 88281473799</h5>
+              </span>
               <p className="text-sm">
-                Providing a Quality and extensive range of furnishings
+                Extensive Range of Industry Leading Furnishings for Commercial Projects.
               </p>
               {/*<div className="flex space-x-4">*/}
               {/*  <Link to="#" className="hover:text-primary transition-colors">*/}
@@ -27,7 +30,7 @@ const Footer = () => {
 
             {/* Quick Links */}
             <div className="space-y-4">
-              <h4 className="text-lg font-semibold text-white">Quick Links</h4>
+            <h4 className="text-lg font-semibold text-white">Quick Links</h4>
               <ul className="space-y-2">
                 <li>
                   <Link to="/" className="hover:text-primary transition-colors">
@@ -41,7 +44,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link to="/services" className="hover:text-primary transition-colors">
-                    Products
+                    Services
                   </Link>
                 </li>
                 <li>

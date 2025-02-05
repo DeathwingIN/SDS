@@ -40,7 +40,7 @@ const Hero = () => {
                         : "opacity-0 scale-105"
                 }`}
             >
-              <div className="absolute inset-0 bg-black/40" />
+              <div className="absolute inset-0 bg-black/50" />
               <img
                   src={slide.image}
                   alt={slide.title}

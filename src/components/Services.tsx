@@ -22,7 +22,7 @@ const Services = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Our Services</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Explore our comprehensive range of services, crafted for reliability and excellence
+              Explore our comprehensive range of services, crafted for reliability and excellence.
             </p>
           </div>
           <div className="relative">
