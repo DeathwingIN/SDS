@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+
 import { Mail, Phone, MapPin } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import {useState, useRef, useEffect} from "react";
@@ -18,8 +19,10 @@ const Contact = () => {
     }
   }, [message]);
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+
     e.preventDefault();
     setIsLoading(true);
+
 
     // Send email using EmailJS
     emailjs
@@ -45,6 +48,7 @@ const Contact = () => {
               setIsLoading(false);
             }
         );
+
   };
 
   return (
