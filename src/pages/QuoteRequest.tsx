@@ -57,7 +57,7 @@ const QuoteRequest = () => {
                 import.meta.env.VITE_EMAILJS_SERVICE_ID,
                 import.meta.env.VITE_EMAILJS_TEMPLATE_IDC,
                 {
-                    to_email: "imeshnirmal1u@gmail.com",
+                    to_email: "info@sdsffe.com.au",
                     project_name: values.projectName,
                     project_address: values.projectAddress,
                     description: values.description,

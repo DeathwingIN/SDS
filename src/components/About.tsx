@@ -1,4 +1,4 @@
-import {BadgeCheck, Droplet} from "lucide-react";
+import {ShieldCheck , Briefcase} from "lucide-react";
 
 const About = () => {
   return (
@@ -16,7 +16,7 @@ const About = () => {
             <div className="grid grid-cols-2 gap-6">
               <div
                   className="group p-4 bg-white rounded-lg shadow-sm hover:bg-primary transition-all duration-300 ease-in-out cursor-pointer">
-                <BadgeCheck className="text-primary mb-2 transition-colors duration-300 group-hover:text-white"
+                <ShieldCheck  className="text-primary mb-2 transition-colors duration-300 group-hover:text-white"
                             size={24}/>
                 <h3 className="font-semibold mb-1 transition-colors duration-300 group-hover:text-white">Quality
                   First</h3>
@@ -26,7 +26,7 @@ const About = () => {
               </div>
               <div
                   className="group p-4 bg-white rounded-lg shadow-sm hover:bg-primary transition-all duration-300 ease-in-out cursor-pointer">
-                <Droplet className="text-primary mb-2 transition-colors duration-300 group-hover:text-white"
+                <Briefcase className="text-primary mb-2 transition-colors duration-300 group-hover:text-white"
                             size={24}/>
                 <h3 className="font-semibold mb-1 transition-colors duration-300 group-hover:text-white">Expert Support</h3>
                 <p className="text-sm text-gray-600 transition-colors duration-300 group-hover:text-white/90">
