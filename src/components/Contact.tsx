@@ -1,10 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-
 import { Mail, Phone, MapPin } from "lucide-react";
 import emailjs from "@emailjs/browser";
-import {useState, useRef, useEffect} from "react";
+import { useState, useRef, useEffect } from "react";
 
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -12,17 +11,67 @@ const Contact = () => {
       null
   );
   const formRef = useRef<HTMLFormElement>(null); // Reference to the form
+
   useEffect(() => {
     if (message) {
-      const timer = setTimeout(() => setMessage(null), 2000);
+      const timer = setTimeout(() => setMessage(null), 5000); // Auto-hide after 5 seconds
       return () => clearTimeout(timer);
     }
   }, [message]);
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 
+  // Function to validate email format
+  const isValidEmailFormat = (email: string): boolean => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsLoading(true);
 
+    // Validate form fields
+    const formData = new FormData(e.currentTarget);
+    const companyName = formData.get("companyName")?.toString().trim();
+    const name = formData.get("name")?.toString().trim();
+    const phone = formData.get("phone")?.toString().trim();
+    const email = formData.get("email")?.toString().trim();
+    const messageText = formData.get("message")?.toString().trim();
+
+    if (!companyName && !name) {
+      setMessage({
+        type: "error",
+        text: "Please provide either a company name or your name.",
+      });
+      return;
+    }
+
+    if (!phone) {
+      setMessage({
+        type: "error",
+        text: "Phone number is required.",
+      });
+      return;
+    }
+
+    if (!email || !isValidEmailFormat(email)) {
+      setMessage({
+        type: "error",
+        text: "Please provide a valid email address.",
+      });
+      return;
+    }
+
+
+    if (!messageText) {
+      setMessage({
+        type: "error",
+        text: "Message field cannot be empty.",
+      });
+      return;
+    }
+
+    setIsLoading(true);
 
     // Send email using EmailJS
     emailjs
@@ -36,7 +85,6 @@ const Contact = () => {
             () => {
               setMessage({ type: "success", text: "Message sent successfully!" });
               setIsLoading(false);
-
               // Reset the form fields
               if (formRef.current) {
                 formRef.current.reset();
@@ -44,11 +92,13 @@ const Contact = () => {
             },
             (error) => {
               console.error("Error sending email:", error);
-              setMessage({ type: "error", text: "Failed to send message. Please try again later." });
+              setMessage({
+                type: "error",
+                text: "Failed to send message. Please try again later.",
+              });
               setIsLoading(false);
             }
         );
-
   };
 
   return (
@@ -91,23 +141,20 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-
             {/* Right Section: Contact Form */}
             <div className="bg-white p-6 rounded-lg shadow-sm relative">
               {/* Message Notification */}
               {message && (
                   <div
-                      className={`absolute bottom-4 left-0 right-0 mx-auto w-full max-w-xs bg-${
-                          message.type === "success" ? "green" : "red"
-                      }-100 text-${
-                          message.type === "success" ? "green" : "red"
-                      }-800 text-sm font-medium px-4 py-2 rounded-md shadow-md transition-opacity duration-300`}
-                      style={{ opacity: message ? 1 : 0 }}
+                      className={`absolute bottom-4 left-0 right-0 mx-auto w-full max-w-xs py-2 px-4 rounded-md shadow-md transition-opacity duration-300 ${
+                          message.type === "success"
+                              ? "bg-green-100 text-green-800"
+                              : "bg-red-100 text-red-800"
+                      }`}
                   >
                     <span>{message.text}</span>
                   </div>
               )}
-
               <form
                   ref={formRef} // Attach the form reference
                   onSubmit={handleSubmit}
