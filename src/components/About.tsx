@@ -6,7 +6,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="fade-in ">
-            <h2 className=" text-3xl text-center md:text-start font-bold mb-6">Who we are</h2>
+            <h2 className=" text-3xl text-center md:text-start font-bold mb-6">Who We Are</h2>
             <p className="text-gray-600 mb-6 ">
               We are a company who specialises in delivering comprehensive fixtures and fittings packages tailored for commercial construction projects throughout Victoria.<br/>
               Our extensive expertise allows us to meticulously analyse architectural drawings and detailed specifications, ensuring we have a clear understanding of the specific scope of work involved.

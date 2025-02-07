@@ -24,7 +24,7 @@ export const services = [
     description: "High-quality products from industry-leading manufacturers, designed to meet public standards while enhancing the value for public users.",
   },
   {
-    title: "Street Furniture",
+    title: "Recycling Bins & Street Furniture ",
     category: "",
     image: "./service05.jpg",
     description: "Durable public carpark equipment from market-leading manufacturers, designed to enhance both the architecture and functionality of outdoor spaces.",
