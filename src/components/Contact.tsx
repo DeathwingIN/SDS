@@ -110,7 +110,7 @@ const Contact = () => {
               <div className="text-center md:text-left mb-8">
                 <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
                 <p className="text-gray-600 mb-8">
-                  Have questions about our services? We're here to help.
+                  We're here to help.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-center justify-center md:justify-start">

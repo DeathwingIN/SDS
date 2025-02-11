@@ -16,10 +16,10 @@ const Footer = () => {
     if (isPage) {
       navigate(href);
     } else {
-      // Navigate directly to the hash URL
+
       navigate(href);
 
-      // If already on home page, force scroll
+
       if (location.pathname === '/') {
         const hash = href.split('#')[1];
         const element = document.getElementById(hash);
@@ -41,7 +41,7 @@ const Footer = () => {
               <h5 className="text-white font-thin">ABN 88281473799</h5>
             </span>
               <p className="text-sm">
-                Extensive Range of Industry Leading Furnishings for Commercial Projects.
+                An extensive range of industry-leading furnishings tailored for commercial projects, ensuring quality, durability, and functionality.
               </p>
             </div>
 
@@ -85,8 +85,8 @@ const Footer = () => {
             <div className="space-y-4">
               <h4 className="text-lg font-semibold text-white">Business Hours</h4>
               <ul className="space-y-2">
-                <li>Monday - Friday: 9:00 AM - 5:00 PM</li>
-                <li>Saturday: 9:00 AM - 2:00 PM</li>
+                <li>Monday - Friday: 8:00 AM - 4:00 PM</li>
+                <li>Saturday: 8:00 AM - 1:00 PM</li>
                 <li>Sunday: Closed</li>
               </ul>
             </div>
