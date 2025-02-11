@@ -21,7 +21,7 @@ const About = () => {
                 <h3 className="font-semibold mb-1 transition-colors duration-300 group-hover:text-white">Quality
                   First</h3>
                 <p className="text-sm text-gray-600 transition-colors duration-300 group-hover:text-white/90">
-                  Premium products from the market's leading suppliers.
+                  Premium products sourced from the industry's leading suppliers.
                 </p>
               </div>
               <div
@@ -30,7 +30,7 @@ const About = () => {
                             size={24}/>
                 <h3 className="font-semibold mb-1 transition-colors duration-300 group-hover:text-white">Expert Support</h3>
                 <p className="text-sm text-gray-600 transition-colors duration-300 group-hover:text-white/90">
-                  Professional guidance and service from our team.
+                  Professional guidance and dedicated service from our team.
                 </p>
               </div>
             </div>

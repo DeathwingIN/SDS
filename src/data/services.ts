@@ -15,18 +15,18 @@ export const services = [
     title: "Modern Laundries, Cleaner’s Rooms",
     category: "",
     image: "./service03.jpg",
-    description: "Enhancing Quality of Life Through Advanced, High-End Laundry Equipment for Commercial Spaces.",
+    description: "Enhancing efficiency and quality of life with high-end, advanced laundry equipment designed for commercial spaces.",
   },
   {
     title: "Drinking Fountains ",
     category: "",
     image: "./service04.jpg",
-    description: "High-quality products from industry-leading manufacturers, designed to meet public standards while enhancing the value for public users.",
+    description: "Premium-quality drinking fountains from industry-leading manufacturers, designed to meet public standards while enhancing user convenience andvalue.",
   },
   {
     title: "Recycling Bins & Street Furniture ",
     category: "",
     image: "./service05.jpg",
-    description: "Durable public carpark equipment from market-leading manufacturers, designed to enhance both the architecture and functionality of outdoor spaces.",
+    description: "High-quality, durable public carpark equipment from market-leading manufacturers, designed to enhance both the aesthetics and functionality of outdoor spaces.",
   },
 ];

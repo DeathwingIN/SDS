@@ -13,12 +13,12 @@ const Hero = () => {
     {
       image: hero1,
       title: "Fixtures and Fittings Supply Solutions",
-      subtitle: "Delivering premium quality service with industry-leading products for commercial projects",
+      subtitle: "Delivering premium-quality service with industry-leading products for commercial projects.",
     },
     {
       image: hero2,
       title: "Professional Services",
-      subtitle: "Reviewing the tender documents is a key responsibility of our estimating team",
+      subtitle: "The estimating team plays a vital role in reviewing tender documents to support accurate project costing and compliance.",
     },
   ];
 
