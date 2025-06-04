@@ -123,7 +123,7 @@ const Contact = () => {
                   </div>
                   <div className="flex items-center justify-center md:justify-start">
                     <MapPin className="w-5 h-5 text-primary mr-3" />
-                    <span>3 Valrena Way, Pakenham, VIC 3810</span>
+                    <span>9 Valrena Way, Pakenham, VIC 3810</span>
                   </div>
                 </div>
               </div>
@@ -131,7 +131,7 @@ const Contact = () => {
               <div className="flex-grow rounded-lg overflow-hidden">
                 <div className="relative pt-[75%]">
                   <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194778.38595481924!2d145.15220899116193!3d-38.08114063596082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad61e013e4e6a13%3A0x65c65dd7bee42942!2s3%20Valrena%20Way%2C%20Pakenham%20VIC%203810%2C%20Australia!5e1!3m2!1sen!2slk!4v1738653559901!5m2!1sen!2slk"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15177.206931336763!2d145.47729077426285!3d-38.07629882181811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad61e01150b4083%3A0x2b13659eb2196cb4!2s9%20Valrena%20Way%2C%20Pakenham%20VIC%203810%2C%20Australia!5e0!3m2!1sen!2slk!4v1749029260963!5m2!1sen!2slk"
                       className="absolute top-0 left-0 w-full h-full"
                       style={{ border: 0 }}
                       allowFullScreen

@@ -76,7 +76,7 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin size={18} />
-                  <span>3 Valrena Way, Pakenham, VIC 3810</span>
+                  <span>9 Valrena Way, Pakenham, VIC 3810</span>
                 </div>
               </div>
             </div>
